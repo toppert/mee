@@ -13,30 +13,10 @@
     <meta name="keywords" content="" />
     <title> Commericial Cars</title>
     <link rel="stylesheet" href="data/tms/website/html/css/reset.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/header/header.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/index.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/animate.min.css" />
     <link rel="stylesheet" href="data/tms/website/html/css/model.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/culture.css" />
     <link rel="stylesheet" href="data/tms/website/html/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/science.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/news.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/footer.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/global.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/chat/chat.css" media="screen" />
-    <link rel="stylesheet" href="data/tms/website/html/css/drive/drive.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/cookie/cookie.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/message/message.css" />
-    <link rel="stylesheet" href="data/tms/website/html/css/minimumIndex.css" />
-    <link rel="stylesheet" href="../g.alicdn.com/de/prismplayer/2.9.20/skins/default/aliplayer-min.css" />
     <script src="data/tms/website/html/js/utils/jquery.js"></script>
-    <script src="data/tms/website/html/js/chat/msg.js"></script>
-    <script src="data/tms/website/html/js/utils/message.js"></script>
-    <script src="data/tms/website/html/js/chat/chat.js"></script>
-    <script src="data/tms/website/html/js/utils/react-development.js"></script>
-    <script src="data/tms/website/html/js/utils/react-dom.development.js"></script>
-    <script src="data/tms/website/html/js/utils/babel.js"></script>
-    <script src="data/tms/website/html/js/utils/message.js"></script>
+  
 </head>
 <body>
 	
@@ -136,24 +116,7 @@
 									alt="" />
 								<div>T9</div>
 							</div>
-							<!-- <div class="swiper-slide" data-index="4">
-								<img
-									src="data/tms/website/html/images/model/eva.png"
-									alt="" />
-								<div>M3 EV</div>
-							</div> -->
-							<!-- <div class="swiper-slide" data-index="5">
-								<img src="data/tms/website/html/images/model/sunrayxcm.png"
-									alt="" />
-								<div>Sunray EV</div>
-							</div>
-							<div class="swiper-slide" data-index="6">
-								<img
-									src="data/tms/website/html/images/model/t9b.png"
-									alt="" />
-								<div>T9 EV</div>
-							</div> -->
-
+							
 						</div>
 					</div>
 				</div>
@@ -176,14 +139,183 @@
 							<img src="data/tms/website/html/images/model/Sunray.png">
 						</div>
 						<div class="introduce">SUPER SUNRAY, SUPER SPACE</div>
-						<a class="viewAll" href="T1/index.html"> <span>TEST DRIVE</span> <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
 
-						<a class="viewAll" href="#"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
+
+						<div class="button-group">
+      <a class="viewAll" href="#" data-model="Sunray" 
+onclick="openTestDriveForm_T8Pro(event, this)">
+
+  <span>TEST DRIVE</span>
+  <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
+</a>
+
+      <a href="#"data-index="02" onclick="sendToParent('Js6'); 
+						return false;" 
+						style="text-align: center; padding: 7px 37px; margin-top: 100;
+      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
+      border-radius: 1px; width: 120px;font-size: 10px;">
+      <span>MORE INFO</span>
+ 
+</a>
+
+
+<script>
+								function triggerParentNavigation() {
+ 					 window.parent.postMessage(
+    				{
+     				 type: 'navigate',
+      				url: 'https://ladi.greenlinecastles.com/sunray/'
+					 },
+    			'*' // or use the specific origin of the parent for more security
+ 				 );
+				} 
+
+					</script>
+    </div>
+
+
+	<style>
+
+
+		
+    				#tdOverlay_T8Pro {
+     				display: none;
+      				position: fixed;
+      				top: 0; left: 0;
+      				width: 100%; height: 100%;
+      				background: rgba(0,0,0,0.5);
+   	   				z-index: 9998;
+   				 }
+    				#tdPopupForm_T8Pro, #tdConfirmation_T8Pro {
+     				 display: none;
+      				position: fixed;
+     				 top: 50%; left: 50%;
+      				transform: translate(-50%, -50%);
+      				background: #fff;
+      				padding: 20px ;
+	  				text-align:center;
+      				border-radius: 10px;
+      				z-index: 9999;
+     				 width: 90%;
+     				 max-width: 600px;
+      				font-family: 'Segoe UI', sans-serif;
+
+   					 }
+ 					 </style>
+
+				<!-- Overlay -->
+				<div id="tdOverlay_T8Pro" onclick="closeTestDriveForm_T8Pro()"></div>
+
+				<!-- Popup Form -->
+				<div id="tdPopupForm_T8Pro"style="display:none; position:fixed; 
+				top:50%; left:50%; transform:translate(-50%, -50%); 
+				z-index:9999; background:#fff; padding:20px; 
+				border-radius:10px; width:90%; max-width:600px; 
+				font-family:'Segoe UI', sans-serif;">
+
+  				<h2 style="color:#c00; font-size:24px; margin-bottom:5px;">Book a Test Drive</h2>
+  				<p style="color:#666; font-size:14px; margin-bottom:25px;">Fill your personal details to book a test drive appointment</p>
+
+  				<form onsubmit="submitTestDriveForm_T8Pro(event)" style="display:flex; 
+  				flex-direction:column; gap:16px;">
+  				<div style="display:flex; gap:10px;">
+
+  				<input type="text" placeholder="First name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+  				<input type="text" placeholder="Last name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+   				</div>
+   
+					<input type="email" placeholder="Enter email here" required style="padding:10px;
+					 border:1px solid #ddd; border-radius:6px;">
+
+	 			<div style="display:flex; gap:10px;">
+      			<select style="width:80px; padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+        		<option value="+234">+234</option>
+       			 <!-- Add more country codes if needed -->
+      			</select>
+      			<input type="tel" placeholder="813 347 1257" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+	 
+   
+   				 <input type="hidden" id="selectedModelInput_T8Pro">
+
+					<!-- Model Dropdown (optional override) -->
+   			 <select id="modelDropdown_T8Pro" 
+			style="padding:10px; border:1px 
+				solid #ddd; border-radius:6px;" required>
+    			  <option value="">Select one of these options</option>
+    			  <option value="T8Pro">T8Pro</option>
+     			 <option value="Sunray">Sunray</option>
+     			 <option value="T9">T9</option>
+     			
+   			 </select>
+
+				<select style="padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+      			<option value="">Select a location</option>
+      			<option value="Lagos">Lagos</option>
+      			<option value="Abuja">Abuja</option>
+    			</select>
+
+				<div style="display:flex; gap:10px;">
+      			<input type="date" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+      			<input type="time" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+
+				<div style="display:flex; justify-content:space-between;">
+     			 <button type="submit" style="padding:12px 20px; background:#c00; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;">Submit ›</button>
+    			</div>
+
+  			  <!-- <button type="submit">Submit ›</button> -->
+  				</form>
+			</div>
+
+				<!-- Confirmation -->
+				<div id="tdConfirmation_T8Pro">
+   				 <h2 style="color:#333; font-size:24px; margin-bottom:10px;">You're All Set!</h2>
+
+  				<p style="color:#888; font-size:15px;">
+   				 Thank you for booking a test drive. One of our team members will contact you shortly to confirm the details. We can't wait for you to experience the drive!
+ 				 </p>
+				</div>
+
+				<!-- JS -->
+				<script>
+  					function openTestDriveForm_T8Pro(event, element) {
+    				event.preventDefault();
+    				const selectedModel = element.getAttribute("data-model");
+    				document.getElementById("selectedModelInput_T8Pro").value = selectedModel;
+
+   				 const dropdown = document.getElementById("modelDropdown_T8Pro");
+   				 for (const option of dropdown.options) {
+     				 if (option.text.toLowerCase() === selectedModel.toLowerCase()) {
+        			dropdown.value = option.value;
+       				 break;
+     			 }
+   			 }
+
+  				  document.getElementById("tdOverlay_T8Pro").style.display = "block";
+    				document.getElementById("tdPopupForm_T8Pro").style.display = "block";
+   					 document.getElementById("tdConfirmation_T8Pro").style.display = "none";
+  				}
+
+ 					 function closeTestDriveForm_T8Pro() {
+   					 document.getElementById("tdOverlay_T8Pro").style.display = "none";
+   					 document.getElementById("tdPopupForm_T8Pro").style.display = "none";
+   					 document.getElementById("tdConfirmation_T8Pro").style.display = "none";
+ 			 }
+
+  					function submitTestDriveForm_T8Pro(event) {
+    				event.preventDefault();
+    				document.getElementById("tdPopupForm_T8Pro").style.display = "none";
+    				document.getElementById("tdConfirmation_T8Pro").style.display = "block";
+  			}
+					</script>
+
 					</div>
+
+
+
+
+						
 					<div class="num_con">
 						<div class="">
 							<div class="p">
@@ -211,20 +343,190 @@
 						</div>
 					</div>
 				</li>
+
+
+
 				<li class="">
 					<div class="word">
 						<div class="p">
 							<img src="data/tms/website/html/images/model/T8 Pro.png">
 						</div>
-						<div class="introduce">MORE THAN PICKUP</div>
-						<a class="viewAll" href="#"> <span>TEST DRIVE</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
 
-						<a class="viewAll" href="#"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
+						<div class="introduce">BORN TO EXPLORE </div>
+
+
+						
+						<div class="button-group">
+      <a class="viewAll" href="#" data-model="T8Pro" 
+onclick="openTestDriveForm_Sunray(event, this)">
+
+  <span>TEST DRIVE</span>
+  <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
+</a>
+
+      <a href="https://www.google.com"data-index="02" onclick="sendToParent('Js6'); 
+						return false;" style="text-align: center; padding: 7px 37px; margin-top: 100;
+      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
+      border-radius: 1px; width: 120px;font-size: 10px;">
+      <span>MORE INFO</span>
+ 
+</a>
+
+
+<script>
+								function triggerParentNavigation() {
+ 					 window.parent.postMessage(
+    				{
+     				 type: 'navigate',
+      				url: 'https://ladi.greenlinecastles.com/js6/'
+					 },
+    			'*' // or use the specific origin of the parent for more security
+ 				 );
+				} 
+
+					</script>
+    </div>
+
+
+	<style>
+
+
+		
+    				#tdOverlay_Sunray {
+     				display: none;
+      				position: fixed;
+      				top: 0; left: 0;
+      				width: 100%; height: 100%;
+      				background: rgba(0,0,0,0.5);
+   	   				z-index: 9998;
+   				 }
+    				#tdPopupForm_Sunray, #tdConfirmation_Sunray {
+     				 display: none;
+      				position: fixed;
+     				 top: 50%; left: 50%;
+      				transform: translate(-50%, -50%);
+      				background: #fff;
+      				padding: 20px ;
+	  				text-align:center;
+      				border-radius: 10px;
+      				z-index: 9999;
+     				 width: 90%;
+     				 max-width: 600px;
+      				font-family: 'Segoe UI', sans-serif;
+
+   					 }
+ 					 </style>
+
+				<!-- Overlay -->
+				<div id="tdOverlay_Sunray" onclick="closeTestDriveForm_Sunray()"></div>
+
+				<!-- Popup Form -->
+				<div id="tdPopupForm_Sunray"style="display:none; position:fixed; 
+				top:50%; left:50%; transform:translate(-50%, -50%); 
+				z-index:9999; background:#fff; padding:20px; 
+				border-radius:10px; width:90%; max-width:600px; 
+				font-family:'Segoe UI', sans-serif;">
+
+  				<h2 style="color:#c00; font-size:24px; margin-bottom:5px;">Book a Test Drive</h2>
+  				<p style="color:#666; font-size:14px; margin-bottom:25px;">Fill your personal details to book a test drive appointment</p>
+
+  				<form onsubmit="submitTestDriveForm_Sunray(event)" style="display:flex; 
+  				flex-direction:column; gap:16px;">
+  				<div style="display:flex; gap:10px;">
+
+  				<input type="text" placeholder="First name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+  				<input type="text" placeholder="Last name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+   				</div>
+   
+					<input type="email" placeholder="Enter email here" required style="padding:10px;
+					 border:1px solid #ddd; border-radius:6px;">
+
+	 			<div style="display:flex; gap:10px;">
+      			<select style="width:80px; padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+        		<option value="+234">+234</option>
+       			 <!-- Add more country codes if needed -->
+      			</select>
+      			<input type="tel" placeholder="813 347 1257" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+	 
+   
+   				 <input type="hidden" id="selectedModelInput_Sunray">
+
+					<!-- Model Dropdown (optional override) -->
+   			 <select id="modelDropdown_Sunray" 
+			style="padding:10px; border:1px 
+				solid #ddd; border-radius:6px;" required>
+    			  <option value="">Select one of these options</option>
+    			  <option value="T8Pro">T8Pro</option>
+     			 <option value="Sunray">Sunray</option>
+     			 <option value="T9">T9</option>
+     			
+   			 </select>
+
+				<select style="padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+      			<option value="">Select a location</option>
+      			<option value="Lagos">Lagos</option>
+      			<option value="Abuja">Abuja</option>
+    			</select>
+
+				<div style="display:flex; gap:10px;">
+      			<input type="date" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+      			<input type="time" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+
+				<div style="display:flex; justify-content:space-between;">
+     			 <button type="submit" style="padding:12px 20px; background:#c00; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;">Submit ›</button>
+    			</div>
+
+  			  <!-- <button type="submit">Submit ›</button> -->
+  				</form>
+			</div>
+
+				<!-- Confirmation -->
+				<div id="tdConfirmation_Sunray">
+   				 <h2 style="color:#333; font-size:24px; margin-bottom:10px;">You're All Set!</h2>
+
+  				<p style="color:#888; font-size:15px;">
+   				 Thank you for booking a test drive. One of our team members will contact you shortly to confirm the details. We can't wait for you to experience the drive!
+ 				 </p>
+				</div>
+
+				<!-- JS -->
+				<script>
+  					function openTestDriveForm_Sunray(event, element) {
+    				event.preventDefault();
+    				const selectedModel = element.getAttribute("data-model");
+    				document.getElementById("selectedModelInput_Sunray").value = selectedModel;
+
+   				 const dropdown = document.getElementById("modelDropdown_Sunray");
+   				 for (const option of dropdown.options) {
+     				 if (option.text.toLowerCase() === selectedModel.toLowerCase()) {
+        			dropdown.value = option.value;
+       				 break;
+     			 }
+   			 }
+
+  				  document.getElementById("tdOverlay_Sunray").style.display = "block";
+    				document.getElementById("tdPopupForm_Sunray").style.display = "block";
+   					 document.getElementById("tdConfirmation_Sunray").style.display = "none";
+  				}
+
+ 					 function closeTestDriveForm_Sunray() {
+   					 document.getElementById("tdOverlay_Sunray").style.display = "none";
+   					 document.getElementById("tdPopupForm_Sunray").style.display = "none";
+   					 document.getElementById("tdConfirmation_Sunray").style.display = "none";
+ 			 }
+
+  					function submitTestDriveForm_Sunray(event) {
+    				event.preventDefault();
+    				document.getElementById("tdPopupForm_Sunray").style.display = "none";
+    				document.getElementById("tdConfirmation_Sunray").style.display = "block";
+  			}
+					</script>
+
 					</div>
+
+						
 
 					<div class="num_con">
 						<div class="">
@@ -253,6 +555,8 @@
 						</div>
 					</div>
 				</li>
+
+				
 				<li class="">
 					<div class="word">
 						<div class="p">
@@ -260,14 +564,178 @@
 								src="data/tms/website/html/images/model/T9.png">
 						</div>
 						<div class="introduce">BORN TO EXPLORE </div>
-						<a class="viewAll" href="#"> <span>TEST DRIVE</span> <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
 
-						<a class="viewAll" href="#"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
+
+							<div class="button-group">
+      <a class="viewAll" href="#" data-model="T9" 
+onclick="openTestDriveForm_T9(event, this)">
+
+  <span>TEST DRIVE</span>
+  <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
+</a>
+
+      <a href="https://www.google.com"data-index="02" onclick="sendToParent('Js6'); 
+						return false;" style="text-align: center; padding: 7px 37px; margin-top: 100;
+      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
+      border-radius: 1px; width: 120px;font-size: 10px;">
+      <span>MORE INFO</span>
+ 
+</a>
+
+
+<script>
+								function triggerParentNavigation() {
+ 					 window.parent.postMessage(
+    				{
+     				 type: 'navigate',
+      				url: 'https://ladi.greenlinecastles.com/js6/'
+					 },
+    			'*' // or use the specific origin of the parent for more security
+ 				 );
+				} 
+
+					</script>
+    </div>
+
+
+	<style>
+
+
+		
+    				#tdOverlay_T9 {
+     				display: none;
+      				position: fixed;
+      				top: 0; left: 0;
+      				width: 100%; height: 100%;
+      				background: rgba(0,0,0,0.5);
+   	   				z-index: 9998;
+   				 }
+    				#tdPopupForm_T9, #tdConfirmation_T9 {
+     				 display: none;
+      				position: fixed;
+     				 top: 50%; left: 50%;
+      				transform: translate(-50%, -50%);
+      				background: #fff;
+      				padding: 20px ;
+	  				text-align:center;
+      				border-radius: 10px;
+      				z-index: 9999;
+     				 width: 90%;
+     				 max-width: 600px;
+      				font-family: 'Segoe UI', sans-serif;
+
+   					 }
+ 					 </style>
+
+				<!-- Overlay -->
+				<div id="tdOverlay_T9" onclick="closeTestDriveForm_T9()"></div>
+
+				<!-- Popup Form -->
+				<div id="tdPopupForm_T9"style="display:none; position:fixed; 
+				top:50%; left:50%; transform:translate(-50%, -50%); 
+				z-index:9999; background:#fff; padding:20px; 
+				border-radius:10px; width:90%; max-width:600px; 
+				font-family:'Segoe UI', sans-serif;">
+
+  				<h2 style="color:#c00; font-size:24px; margin-bottom:5px;">Book a Test Drive</h2>
+  				<p style="color:#666; font-size:14px; margin-bottom:25px;">Fill your personal details to book a test drive appointment</p>
+
+  				<form onsubmit="submitTestDriveForm_T9(event)" style="display:flex; 
+  				flex-direction:column; gap:16px;">
+  				<div style="display:flex; gap:10px;">
+
+  				<input type="text" placeholder="First name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+  				<input type="text" placeholder="Last name" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+   				</div>
+   
+					<input type="email" placeholder="Enter email here" required style="padding:10px;
+					 border:1px solid #ddd; border-radius:6px;">
+
+	 			<div style="display:flex; gap:10px;">
+      			<select style="width:80px; padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+        		<option value="+234">+234</option>
+       			 <!-- Add more country codes if needed -->
+      			</select>
+      			<input type="tel" placeholder="813 347 1257" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+	 
+   
+   				 <input type="hidden" id="selectedModelInput_T9">
+
+					<!-- Model Dropdown (optional override) -->
+   			 <select id="modelDropdown_T9" 
+			style="padding:10px; border:1px 
+				solid #ddd; border-radius:6px;" required>
+    			  <option value="">Select one of these options</option>
+    			  <option value="T8Pro">T8Pro</option>
+     			 <option value="Sunray">Sunray</option>
+     			 <option value="T9">T9</option>
+     			 
+   			 </select>
+
+				<select style="padding:10px; border:1px solid #ddd; border-radius:6px;" required>
+      			<option value="">Select a location</option>
+      			<option value="Lagos">Lagos</option>
+      			<option value="Abuja">Abuja</option>
+    			</select>
+
+				<div style="display:flex; gap:10px;">
+      			<input type="date" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+      			<input type="time" required style="flex:1; padding:10px; border:1px solid #ddd; border-radius:6px;">
+    			</div>
+
+				<div style="display:flex; justify-content:space-between;">
+     			 <button type="submit" style="padding:12px 20px; background:#c00; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;">Submit ›</button>
+    			</div>
+
+  			  <!-- <button type="submit">Submit ›</button> -->
+  				</form>
+			</div>
+
+				<!-- Confirmation -->
+				<div id="tdConfirmation_T9">
+   				 <h2 style="color:#333; font-size:24px; margin-bottom:10px;">You're All Set!</h2>
+
+  				<p style="color:#888; font-size:15px;">
+   				 Thank you for booking a test drive. One of our team members will contact you shortly to confirm the details. We can't wait for you to experience the drive!
+ 				 </p>
+				</div>
+
+				<!-- JS -->
+				<script>
+  					function openTestDriveForm_T9(event, element) {
+    				event.preventDefault();
+    				const selectedModel = element.getAttribute("data-model");
+    				document.getElementById("selectedModelInput_T9").value = selectedModel;
+
+   				 const dropdown = document.getElementById("modelDropdown_T9");
+   				 for (const option of dropdown.options) {
+     				 if (option.text.toLowerCase() === selectedModel.toLowerCase()) {
+        			dropdown.value = option.value;
+       				 break;
+     			 }
+   			 }
+
+  				  document.getElementById("tdOverlay_T9").style.display = "block";
+    				document.getElementById("tdPopupForm_T9").style.display = "block";
+   					 document.getElementById("tdConfirmation_T9").style.display = "none";
+  				}
+
+ 					 function closeTestDriveForm_T9() {
+   					 document.getElementById("tdOverlay_T9").style.display = "none";
+   					 document.getElementById("tdPopupForm_T9").style.display = "none";
+   					 document.getElementById("tdConfirmation_T9").style.display = "none";
+ 			 }
+
+  					function submitTestDriveForm_T9(event) {
+    				event.preventDefault();
+    				document.getElementById("tdPopupForm_T9").style.display = "none";
+    				document.getElementById("tdConfirmation_T9").style.display = "block";
+  			}
+					</script>
+
 					</div>
+						
 					<div class="num_con">
 						<div class="">
 							<div class="p">
@@ -295,138 +763,7 @@
 						</div>
 					</div>
 				</li>
-				<!-- <li class="">
-					<div class="word">
-						<div class="p">
-							<img
-								src="data/tms/website/html/images/model/M3 Ev.png">
-						</div>
-						<div class="introduce">
-                         SUPER SUNRAY, SUPER SPACE
-                        </div>
-						<a class="viewAll" href="#"> <span>TEST DRIVE</span> <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-
-						<a class="viewAll" href="#"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-					</div>
-					<div class="num_con">
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="2600">2600</span>mm
-							</div>
-							<div class="b">
-								LENGTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="1530">1530</span>mm
-							</div>
-							<div class="b">
-								WIDTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="1295">1295</span>mm
-							</div>
-							<div class="b">
-								HEIGHT<span class="line"></span>
-							</div>
-						</div>
-					</div>
-				</li> -->
-				<!-- <li class="">
-					<div class="word">
-						<div class="p">
-							<img src="data/tms/website/html/images/model/Sunray Ev.png">
-						</div>
-						<div class="introduce">
-                            SUPER SUNRAY, SUPER SPACE 
-                        </div>
-						<a class="viewAll" href="x70/index.html"> <span>TEST DRIVE</span> <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-
-						<a class="viewAll" href="T2/index.html"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-					</div>
-					<div class="num_con">
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="5990">5990</span>mm
-							</div>
-							<div class="b">
-								LENGTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="2098">2098</span>mm
-							</div>
-							<div class="b">
-								WIDTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="2645">2645</span>mm
-							</div>
-							<div class="b">
-								HEIGHT<span class="line"></span>
-							</div>
-						</div>
-					</div>
-				</li> -->
-
-
-				<!-- <li class="">
-					<div class="word">
-						<div class="p">
-							<img src="data/tms/website/html/images/model/T9 Ev.png">
-						</div>
-						<div class="introduce">
-                        ALL-WHEEL DRIVER ELECTRIC PICK-UP 
-                        </div>
-						<a class="viewAll" href="x70/index.html"> <span>TEST DRIVE</span> <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-
-						<a class="viewAll" href="T2/index.html"> <span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-					</div>
-					<div class="num_con">
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="5330">5330</span>mm
-							</div>
-							<div class="b">
-								LENGTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="1965">1965</span>mm
-							</div>
-							<div class="b">
-								WIDTH<span class="line"></span>
-							</div>
-						</div>
-						<div class="">
-							<div class="p">
-								<span class="num" data-num="1920">1920</span>mm
-							</div>
-							<div class="b">
-								HEIGHT<span class="line"></span>
-							</div>
-						</div>
-					</div>
-				</li> -->
+				
 				
 			</ul>
 		</div>

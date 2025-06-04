@@ -657,6 +657,56 @@
 	right: 20%;
 	transition:all 0.5s ease-in-out;
 }
+
+
+.viewAlla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+    color:white;
+    background:#cc000c;
+    width: 2rem;
+    height: 0.43rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.12rem;
+	font-size: 0.16rem;
+}
+.viewAlla img{
+	position: absolute;
+/* 	content: ''; */
+	width: 0.17rem;
+	/* height: 0.14rem; */
+	right: 30%;
+	top: 50%;
+	transform: translateY(-50%);
+	/* background: url(../images/W-R.png) no-repeat center bottom; */
+	/* background-size:100% auto ; */
+	opacity: 0;
+	 transition:all 0.5s ease-in-out;
+
+}
+.viewAlla span{
+	/* display: block; */
+	width: 100%;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	text-align: center;
+	transform: translateY(-50%);
+	
+	transition:all 0.5s ease-in-out;
+}
+.viewAlla:hover span{
+	opacity: 1;
+	left: -10%;
+	transition:all 0.5s ease-in-out;
+}
+.viewAlla:hover img{
+	opacity: 1;
+	right: 20%;
+	transition:all 0.5s ease-in-out;
+}
 .playDirectly {
     position: relative;
     width: 100%;
@@ -786,6 +836,31 @@
   margin-top: 0.2rem;
 }
 
+
+
+
+.mb-model2 .model-box .btn {
+  width: 3.2rem;
+  height: 0.69rem;
+  background-color: #cc000c;
+  border-bottom: 0.04rem solid #4aa3db;
+  color: #fff;
+  font-size: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 0.73rem;
+  letter-spacing: 0.03rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 0.2rem;
+}
 .mb-model .model-box .description {
   position: absolute;
   left: 0.73rem;
