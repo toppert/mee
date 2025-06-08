@@ -201,7 +201,13 @@ onclick="openTestDriveForm_js6(event, this)">
 
 
 <!-- iframe-page.html (on https://external.com) -->
-<button id="openParentLink">Open Parent URL</button>
+<button id="openParentLink"
+onclick="sendToParent('Js6'); return false;" 
+        style="text-align: center; padding: 7px 30px; margin-top: 5px; 
+               background: #c00; color: #fff; text-decoration: none; 
+               font-weight: 300; border-radius: 1px; width: 127px; 
+               font-size: 10px; border: none; cursor: pointer;">
+    <span>MORE INFO</span></button>
 
 <script>
   document.getElementById('openParentLink').addEventListener('click', function() {
@@ -228,13 +234,15 @@ onclick="openTestDriveForm_js6(event, this)">
 
 					</script> -->
 
-      <a href="#" onclick="sendToParent('Js6'); 
+      <!-- <a href="#" onclick="sendToParent('Js6'); 
 						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
       background: #c00; color: #fff; text-decoration: none; font-weight:300; 
       border-radius: 1px; width: 120px;font-size: 10px;">
       <span>MORE INFO</span>
  
-</a>
+</a> -->
+
+
 
     </div>
 
