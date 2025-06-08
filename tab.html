@@ -199,7 +199,23 @@ onclick="openTestDriveForm_js6(event, this)">
 </a>
 
 
+
+<!-- iframe-page.html (on https://external.com) -->
+<button id="openParentLink">Open Parent URL</button>
+
 <script>
+  document.getElementById('openParentLink').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/js6/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
+
+
+
+<!-- <script>
 								function triggerParentNavigation() {
  					 window.parent.postMessage(
     				{
@@ -210,7 +226,7 @@ onclick="openTestDriveForm_js6(event, this)">
  				 );
 				} 
 
-					</script>
+					</script> -->
 
       <a href="#" onclick="sendToParent('Js6'); 
 						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
@@ -219,8 +235,6 @@ onclick="openTestDriveForm_js6(event, this)">
       <span>MORE INFO</span>
  
 </a>
-
-
 
     </div>
 
