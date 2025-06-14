@@ -212,7 +212,7 @@
 					<div class="introduce">IT'S MY 6TH SENSE</div>
 
           <div class="button-group">
-      <a class="viewAll" href="#" data-model="Js4" 
+      <a class="viewAll" href="#" data-model="Js6" 
 onclick="openTestDriveForm_js6(event, this)">
 
   <span>TEST DRIVE</span>
@@ -235,15 +235,6 @@ onclick="openTestDriveForm_js6(event, this)">
     <span>MORE INFO</span>
     <img src="data/tms/website/html/images/model/W-R.png">
 </a>
-
-
-<!-- <button id="openParentLink"
-onclick="sendToParent('Js6'); return false;" 
-        style="text-align: center; padding: 7px 30px; margin-top: 5px; 
-               font-weight: 300; border-radius: 1px; width: 127px; 
-               background: #c00; color: #fff; text-decoration: none; 
-               font-size: 10px; border: none; cursor: pointer;">
-    <span>MORE INFO</span></button> -->
 
 <script>
   document.getElementById('openParentLink').addEventListener('click', function() {
@@ -485,15 +476,7 @@ onclick="openTestDriveForm(event, this)">
 
   <span>TEST DRIVE</span>
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
-<!-- </a>
 
-     <a href="#" onclick="sendToParent('Js4'); 
-						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
-      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
-      border-radius: 1px; width: 120px;font-size: 10px;">
-      <span>MORE INFO</span>
- 
-</a> -->
 
 
 <a id="openParentLink1" class="viewAll" href="#" onclick="sendToParent('Js4'); return false;">
@@ -513,18 +496,7 @@ onclick="openTestDriveForm(event, this)">
 </script>
 
 
-<!-- <script>
-								function triggerParentNavigation() {
- 					 window.parent.postMessage(
-    				{
-     				 type: 'navigate',
-      				url: 'https://ladi.greenlinecastles.com/js4/'
-					 },
-    			'*' // or use the specific origin of the parent for more security
- 				 );
-				} 
 
-					</script> -->
 
     </div>
 
@@ -727,28 +699,7 @@ onclick="openTestDriveForm_j7(event, this)">
   });
 </script>
 
-<!-- 
-      <a href="#" onclick="sendToParent('Js7'); 
-						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
-      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
-      border-radius: 1px; width: 120px;font-size: 10px;">
-      <span>MORE INFO</span>
- 
-</a>
 
-
-<script>
-								function triggerParentNavigation() {
- 					 window.parent.postMessage(
-    				{
-     				 type: 'navigate',
-      				url: 'https://ladi.greenlinecastles.com/j7'
-					 },
-    			'*' // or use the specific origin of the parent for more security
- 				 );
-				} 
-
-					</script> -->
     </div>
 
 
@@ -934,27 +885,21 @@ onclick="openTestDriveForm_js2(event, this)">
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
 </a>
 
-      <a href="#" onclick="sendToParent('Js2'); 
-						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
-      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
-      border-radius: 1px; width: 120px;font-size: 10px;">
-      <span>MORE INFO</span>
- 
+      <a id="openParentLink3" class="viewAll" href="#" onclick="sendToParent('Js2'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
 </a>
 
 
 <script>
-								function triggerParentNavigation() {
- 					 window.parent.postMessage(
-    				{
-     				 type: 'navigate',
-      				url: 'https://ladi.greenlinecastles.com/js2/'
-					 },
-    			'*' // or use the specific origin of the parent for more security
- 				 );
-				} 
-
-					</script>
+  document.getElementById('openParentLink3').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/js2/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
     </div>
 
     <style>
@@ -1142,28 +1087,21 @@ onclick="openTestDriveForm_js8(event, this)">
   <span>TEST DRIVE</span>
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
 </a>
-
-      <a href="#"data-index="02" onclick="sendToParent('Js8'); 
-						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
-      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
-      border-radius: 1px; width: 120px;font-size: 10px;">
-      <span>MORE INFO</span>
- 
+<a id="openParentLink4" class="viewAll" href="#" onclick="sendToParent('Js8'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
 </a>
 
 
 <script>
-								function triggerParentNavigation() {
- 					 window.parent.postMessage(
-    				{
-     				 type: 'navigate',
-      				url: '#'
-					 },
-    			'*' // or use the specific origin of the parent for more security
- 				 );
-				} 
-
-					</script>
+  document.getElementById('openParentLink4').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/js8/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
     </div>
 
     <style>
