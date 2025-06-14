@@ -711,6 +711,23 @@ onclick="openTestDriveForm_j7(event, this)">
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
 </a>
 
+<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js7'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
+</a>
+
+
+<script>
+  document.getElementById('openParentLink').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/js7/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
+
+<!-- 
       <a href="#" onclick="sendToParent('Js7'); 
 						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
       background: #c00; color: #fff; text-decoration: none; font-weight:300; 
@@ -731,7 +748,7 @@ onclick="openTestDriveForm_j7(event, this)">
  				 );
 				} 
 
-					</script>
+					</script> -->
     </div>
 
 
