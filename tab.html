@@ -231,17 +231,19 @@ onclick="openTestDriveForm_js6(event, this)">
  
 </a> -->
 
-<a class="viewAll" href="#" onclick="sendToParent('Js6'); 
-						return false;"><span>MORE INFO</span>  <img
-							src="data/tms/website/html/images/model/W-R.png">
-						</a>
-<button id="openParentLink"
+<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js6'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
+</a>
+
+
+<!-- <button id="openParentLink"
 onclick="sendToParent('Js6'); return false;" 
         style="text-align: center; padding: 7px 30px; margin-top: 5px; 
                font-weight: 300; border-radius: 1px; width: 127px; 
                background: #c00; color: #fff; text-decoration: none; 
                font-size: 10px; border: none; cursor: pointer;">
-    <span>MORE INFO</span></button>
+    <span>MORE INFO</span></button> -->
 
 <script>
   document.getElementById('openParentLink').addEventListener('click', function() {
