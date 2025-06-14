@@ -102,23 +102,4 @@ function AnchorPointMb(props) {
       </ul>
     </div>
   );
-
-   return (
-    <div className="anchor-point-box-mb">
-      <div className="more-info-box">
-        <div
-          className="more-info"
-          onClick={() => {
-            $("#drive").css("display", "block");
-            $("body").css("overflow", "hidden");
-          }}
-        >
-          More Info
-        </div>
-      </div>
-      <ul id="anchor-point-ul-mb" className="anchor-point">
-        {nav}
-      </ul>
-    </div>
-  );
 }
