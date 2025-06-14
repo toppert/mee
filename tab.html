@@ -485,7 +485,7 @@ onclick="openTestDriveForm(event, this)">
 
   <span>TEST DRIVE</span>
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
-</a>
+<!-- </a>
 
      <a href="#" onclick="sendToParent('Js4'); 
 						return false;" style="text-align: center; padding: 7px 40px; margin-top: 100;
@@ -493,10 +493,27 @@ onclick="openTestDriveForm(event, this)">
       border-radius: 1px; width: 120px;font-size: 10px;">
       <span>MORE INFO</span>
  
+</a> -->
+
+
+<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js4'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
 </a>
 
 
 <script>
+  document.getElementById('openParentLink').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/js4/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
+
+
+<!-- <script>
 								function triggerParentNavigation() {
  					 window.parent.postMessage(
     				{
@@ -507,7 +524,7 @@ onclick="openTestDriveForm(event, this)">
  				 );
 				} 
 
-					</script>
+					</script> -->
 
     </div>
 
