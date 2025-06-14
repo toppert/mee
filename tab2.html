@@ -13,9 +13,30 @@
     <meta name="keywords" content="" />
     <title> Commericial Cars</title>
     <link rel="stylesheet" href="data/tms/website/html/css/reset.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/header/header.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/index.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/animate.min.css" />
     <link rel="stylesheet" href="data/tms/website/html/css/model.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/culture.css" />
     <link rel="stylesheet" href="data/tms/website/html/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/science.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/news.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/footer.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/global.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/chat/chat.css" media="screen" />
+    <link rel="stylesheet" href="data/tms/website/html/css/drive/drive.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/cookie/cookie.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/message/message.css" />
+    <link rel="stylesheet" href="data/tms/website/html/css/minimumIndex.css" />
+    <link rel="stylesheet" href="../g.alicdn.com/de/prismplayer/2.9.20/skins/default/aliplayer-min.css" />
     <script src="data/tms/website/html/js/utils/jquery.js"></script>
+    <script src="data/tms/website/html/js/chat/msg.js"></script>
+    <script src="data/tms/website/html/js/utils/message.js"></script>
+    <script src="data/tms/website/html/js/chat/chat.js"></script>
+    <script src="data/tms/website/html/js/utils/react-development.js"></script>
+    <script src="data/tms/website/html/js/utils/react-dom.development.js"></script>
+    <script src="data/tms/website/html/js/utils/babel.js"></script>
+    <script src="data/tms/website/html/js/utils/message.js"></script>
   
 </head>
 <body>
@@ -147,8 +168,34 @@ onclick="openTestDriveForm_T8Pro(event, this)">
 
   <span>TEST DRIVE</span>
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
+</a>
+<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js4'); return false;">
+    <span>MORE INFO</span>
+    <img src="data/tms/website/html/images/model/W-R.png">
+</a>
 
-  <script>
+
+<script>
+  document.getElementById('openParentLink').addEventListener('click', function() {
+    const message = {
+      type: 'navigate',
+      url: 'https://ladi.greenlinecastles.com/sunray/' // the URL to open
+    };
+    window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
+  });
+</script>
+
+      <!-- <a href="#" onclick="sendToParent('Js6'); 
+						return false;" 
+						style="text-align: center; padding: 7px 40px; margin-top: 100;
+      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
+      border-radius: 1px; width: 120px;font-size: 10px;">
+      <span>MORE INFO</span>
+ 
+</a>
+
+
+<script>
 								function triggerParentNavigation() {
  					 window.parent.postMessage(
     				{
@@ -159,20 +206,7 @@ onclick="openTestDriveForm_T8Pro(event, this)">
  				 );
 				} 
 
-					</script>
-</a>
-
-      <a href="#" onclick="sendToParent('Js6'); 
-						return false;" 
-						style="text-align: center; padding: 7px 40px; margin-top: 100;
-      background: #c00; color: #fff; text-decoration: none; font-weight:300; 
-      border-radius: 1px; width: 120px;font-size: 10px;">
-      <span>MORE INFO</span>
- 
-</a>
-
-
-
+					</script> -->
     </div>
 
 

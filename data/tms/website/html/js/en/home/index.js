@@ -746,10 +746,5 @@ var currentIndex = 0;
 		$("body").css("overflow", "hidden");
 		$("#drive").css("display", "block");
 	}
-
-	function openMoreInfo() {
-		$("body").css("overflow", "hidden");
-		$("#drive").css("display", "block");
-	}
 	
 	
