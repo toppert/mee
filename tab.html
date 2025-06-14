@@ -496,14 +496,14 @@ onclick="openTestDriveForm(event, this)">
 </a> -->
 
 
-<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js4'); return false;">
+<a id="openParentLink1" class="viewAll" href="#" onclick="sendToParent('Js4'); return false;">
     <span>MORE INFO</span>
     <img src="data/tms/website/html/images/model/W-R.png">
 </a>
 
 
 <script>
-  document.getElementById('openParentLink').addEventListener('click', function() {
+  document.getElementById('openParentLink1').addEventListener('click', function() {
     const message = {
       type: 'navigate',
       url: 'https://ladi.greenlinecastles.com/js4/' // the URL to open
@@ -711,17 +711,17 @@ onclick="openTestDriveForm_j7(event, this)">
   <img src="data/tms/website/html/images/model/W-R.png" alt="Icon">
 </a>
 
-<a id="openParentLink" class="viewAll" href="#" onclick="sendToParent('Js7'); return false;">
+<a id="openParentLink2" class="viewAll" href="#" onclick="sendToParent('Js7'); return false;">
     <span>MORE INFO</span>
     <img src="data/tms/website/html/images/model/W-R.png">
 </a>
 
 
 <script>
-  document.getElementById('openParentLink').addEventListener('click', function() {
+  document.getElementById('openParentLink2').addEventListener('click', function() {
     const message = {
       type: 'navigate',
-      url: 'https://ladi.greenlinecastles.com/js7/' // the URL to open
+      url: 'https://ladi.greenlinecastles.com/j7/' // the URL to open
     };
     window.parent.postMessage(message, 'https://ladi.greenlinecastles.com/'); // Use '*' or restrict to specific origin
   });
